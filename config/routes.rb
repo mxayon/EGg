@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/', to: 'lessons#index'
+  get '/lesson', to: 'lessons#show'
+  get '/win', to: 'lessons#win'
+
+
 end
