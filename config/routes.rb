@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/lesson', to: 'lessons#show'
   get '/win', to: 'lessons#win'
 
-  
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
 
 end
