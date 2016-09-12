@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'lessons#index', as: 'root'
 
-  get '/', to: 'lessons#index'
   get '/lesson', to: 'lessons#show'
   get '/win', to: 'lessons#win'
 
