@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160911105932) do
+ActiveRecord::Schema.define(version: 20160912050317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "learners", force: :cascade do |t|
+    t.string   "name"
+    t.string   "image"
+    t.string   "age"
+    t.string   "parent_guardian"
+    t.string   "contact_info"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_learners_on_user_id", using: :btree
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "starting_mood"
+    t.integer  "level"
+    t.boolean  "verbal_word_approximation"
+    t.boolean  "physically_identify"
+    t.string   "good_choices"
+    t.string   "action"
+    t.string   "observations"
+    t.string   "comments"
+    t.date     "date"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -28,4 +55,5 @@ ActiveRecord::Schema.define(version: 20160911105932) do
     t.datetime "updated_at",             null: false
   end
 
+  add_foreign_key "learners", "users"
 end
