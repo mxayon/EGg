@@ -1,4 +1,4 @@
-<%= form_for :learner, url: learners_path do |f| %>
+<%= form_for :learner, url: '/learners', method: 'post' do |f| %>
   Learner Name :<%= f.text_field :name %>
   Learner Age: <%= f.text_field :age %>
   <%= f.submit "Save Learner" %>

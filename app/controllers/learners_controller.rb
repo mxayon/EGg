@@ -1,10 +1,13 @@
 class LearnersController < ApplicationController
 
   def index
+    @user = current_user
     @learners = Learner.all
   end
 
   def new
+    @user = current_user
+    @learner = Learner.new(learner_params)
   end
 
   def create
@@ -33,7 +36,7 @@ class LearnersController < ApplicationController
       redirect_to :back
     end
   end
-  
+
   private
 
   def learner_params
