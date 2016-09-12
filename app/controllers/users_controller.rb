@@ -13,6 +13,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def index
+  end
+
   private
 
     def user_params
