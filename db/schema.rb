@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912050317) do
+ActiveRecord::Schema.define(version: 20160912053236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20160912050317) do
     t.date     "date"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "learner_id"
+    t.index ["learner_id"], name: "index_logs_on_learner_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,4 +58,5 @@ ActiveRecord::Schema.define(version: 20160912050317) do
   end
 
   add_foreign_key "learners", "users"
+  add_foreign_key "logs", "learners"
 end
