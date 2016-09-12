@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/users', to: 'users#create'
 
+  get '/learners', to: 'learners#index', as: 'learners'
+  get '/learners/:id', to: 'learners#show', as: 'learner'
+
 
 end
