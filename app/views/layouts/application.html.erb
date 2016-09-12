@@ -15,7 +15,10 @@
     <% else %>
       <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     <% end %>
-    
+    |
+    <%= link_to "All Learners", learners_path %>
+
+
     <%= yield %>
   </body>
 </html>

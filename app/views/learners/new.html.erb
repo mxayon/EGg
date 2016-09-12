@@ -1,0 +1,10 @@
+<%= form_for @learner do |f| %>
+  Learner Name :<%= f.text_field :name %>
+  Learner Age: <%= f.text_field :age %>
+  Learner Image: <%= f.text_field :image %>
+  Learner Parent/Guardian: <%= f.text_field :parent_guardian %>
+  Learner Parent/Guardian Contact Information: <%= f.text_field :contact_info %>
+  Learner Moderator :<%= f.text_field :user_id %>
+
+  <%= f.submit "Save Learner" %>
+<% end %>

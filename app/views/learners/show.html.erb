@@ -1,0 +1,11 @@
+<div class="row">
+  <h1> <%= @learner.name %> </h1>
+  <h2> <%= @learner.age %> </h2>
+  <h3> <%= @learner.parent_guardian %> </h3>
+  <h4> <%= @learner.contact_info %> </h4>
+  <%= image_tag(@learner.image) %>
+  <%= link_to "Delete", @learners, method: :delete %>
+  |
+  <a href="<%= edit_learner_path(@learner) %>" class="button expanded">Edit Learner Information</a>
+
+</div>

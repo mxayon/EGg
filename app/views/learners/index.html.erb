@@ -1,0 +1,15 @@
+
+<% @learners.each do |learner| %>
+
+<h1> <%= learner.name %> </h1>
+<h2> <%= learner.age %> </h2>
+<h3> <%= learner.parent_guardian %> </h3>
+<h4> <%= learner.contact_info %> </h4>
+<%= link_to "Delete", learner_path(learner), method: :delete %>
+|
+<%= link_to "Show #{learner.name}", learner_path(learner)%>
+|
+<a href="<%= edit_learner_path(learner) %>" class="button expanded">Edit Learner Information</a>
+
+
+<% end %>
