@@ -1,0 +1,15 @@
+<%= form_for [@learner, @log] do |f| %>
+  Title :<%= f.text_field :title %>
+  Learner Starting mood: <%= f.text_field :starting_mood %>
+  Level: <%= f.text_field :level %>
+  Can Verbally make word approximation: <%= f.text_field :verbal_word_approximation %>
+  Can Physically Identify or Point to: <%= f.text_field :physically_identify %>
+  Good Choices Used :<%= f.text_field :good_choices %>
+  Action :<%= f.text_field :action %>
+  Observations :<%= f.text_field :observations %>
+  Comments :<%= f.text_field :comments %>
+  Date of Log :<%= f.text_field :date %>
+  Learner ID :<%= f.text_field :learner_id %>
+
+  <%= f.submit "Edit Log" %>
+<% end %>

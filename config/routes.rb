@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
   get '/signup', to: 'users#new'
   post '/users', to: 'users#create'
+  get '/users/:id', to: 'users#show', as: 'user'
 
-  resources :learners
+  resources :learners do
+    resources :logs
+  end
 
 
 end

@@ -1,0 +1,37 @@
+<h1>
+  Title: <%= @log.title %>
+</h1>
+<h5>
+  Learner Starting mood: <%= @log.starting_mood %>
+</h5>
+<h5>
+  Level: <%= @log.level %>
+</h5>
+<h5>
+  Can Verbally make word approximation: <%= @log.verbal_word_approximation %>
+</h5>
+<h5>
+  Can Physically Identify or Point to: <%= @log.physically_identify %>
+</h5>
+<h5>
+  Good Choices Used: <%= @log.good_choices %>
+</h5>
+<h5>
+  Action: <%= @log.action %>
+</h5>
+<h5>
+  Observations: <%= @log.observations %>
+</h5>
+<h5>
+  Comments: <%= @log.comments %>
+</h5>
+<h5>
+  Date of Log: <%= @log.date %>
+</h5>
+<h5>
+  Learner ID: <%= @log.learner_id %>
+</h5>
+<%= link_to "Delete", learner_log_path, method: :delete %>
+|
+<a href="<%= edit_learner_log_path(@learner, @log) %>" class="button expanded">Edit Log</a> |
+<%= link_to 'Back', :back %>

@@ -3,9 +3,9 @@
   <h2> <%= @learner.age %> </h2>
   <h3> <%= @learner.parent_guardian %> </h3>
   <h4> <%= @learner.contact_info %> </h4>
-  <%= image_tag(@learner.image) %>
-  <%= link_to "Delete", @learners, method: :delete %>
-  |
+  <%= image_tag(@learner.image) %>  <br>
   <a href="<%= edit_learner_path(@learner) %>" class="button expanded">Edit Learner Information</a>
+  <%= link_to "Show #{@learner.name}'s Logs", learner_logs_path(@learner) %>
+  <%= link_to 'Back', :back %>
 
 </div>
