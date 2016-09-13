@@ -27,6 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'less-rails-semantic_ui', '~> 2.2.3'
+gem 'autoprefixer-rails', '~> 6.4.1'
+
+gem 'therubyracer', platforms: :ruby # or any other runtime
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
