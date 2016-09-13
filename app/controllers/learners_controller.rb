@@ -6,12 +6,12 @@ class LearnersController < ApplicationController
   end
 
   def new
-    @user = current_user
+    @user = User.find_by_id(params[:id])
     @learner = Learner.new
   end
 
   def create
-    @user = current_user
+    @user = User.find_by_id(params[:id])
     @learner = Learner.new(learner_params)
     @user.learners.push(@learner)
 
@@ -21,7 +21,7 @@ class LearnersController < ApplicationController
 
   def show
     @user = current_user
-    @learner = Learner.find_by_id(params[:id])
+    @learner = @user.learners.find_by_id(params[:id])
   end
 
   def edit

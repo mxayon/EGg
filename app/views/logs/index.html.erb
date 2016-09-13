@@ -1,0 +1,22 @@
+
+<% @logs.each do |log| %>
+
+<h1> <%= log.title %> </h1>
+<h2> <%= log.starting_mood %> </h2>
+<h3> <%= log.verbal_word_approximation %> </h3>
+<h4> <%= log.physically_identify %> </h4>
+<h4> <%= log.good_choices %> </h4>
+<h4> <%= log.action %> </h4>
+<h4> <%= log.observations %> </h4>
+<h4> <%= log.comments %> </h4>
+<h4> <%= log.date %> </h4>
+<hr>
+
+<%= link_to " #{log.title}", learner_log_path(@learner, log)%>
+|
+<%= link_to "Delete", learner_log_path(@learner, log), method: :delete %>
+
+
+<% end %>
+
+<%= link_to 'Back', :back %>
