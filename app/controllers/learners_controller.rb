@@ -13,7 +13,6 @@ class LearnersController < ApplicationController
   def create
     @user = User.find_by_id(params[:id])
     @learner = Learner.new(learner_params)
-    @user.learners.push(@learner)
 
     @learner.save
       redirect_to @learner

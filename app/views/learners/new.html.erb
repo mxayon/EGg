@@ -1,10 +1,40 @@
-<%= form_for @learner do |f| %>
-  Learner Name :<%= f.text_field :name %>
-  Learner Age: <%= f.text_field :age %>
-  Learner Image: <%= f.text_field :image %>
-  Learner Parent/Guardian: <%= f.text_field :parent_guardian %>
-  Learner Parent/Guardian Contact Information: <%= f.text_field :contact_info %>
-  Learner Moderator :<%= f.text_field :user_id %>
 
-  <%= f.submit "Save Learner" %>
-<% end %>
+<div class="ui raised very padded text container segment centered">
+  <%= form_for @learner do |f| %>
+  <div class="ui form">
+    <div class="equal width fields">
+        <div class="field">
+        <label>Learner Name:</label>
+        <%= f.text_field :name, :placeholder => 'Learner First & Last Name' %>
+      </div>
+      <div class="field">
+        <label>Learner Age:</label>
+        <%= f.text_field :age, :placeholder => '6' %>
+      </div>
+      <div class="field">
+        <label>Learner Image:</label>
+        <%= f.text_field :image, :placeholder => 'Image URL' %>
+      </div>
+    </div>
+    <div class="equal width fields">
+      <div class="field">
+        <label>Learner Parent/Guardian:</label>
+        <%= f.text_field :parent_guardian, :placeholder => 'Parent / Guardian Name' %>
+      </div>
+      <div class="field">
+        <label>Parent/Guardian Contact Information:</label>
+        <%= f.text_field :contact_info, :placeholder => '(415) 707-77-77' %>
+      </div>
+      <div class="field">
+        <label>Learner Moderator ID:</label>
+        <%= f.text_field :user_id, :placeholder => '1' %>
+      </div>
+    </div>
+    <button class="fluid ui button">
+      <i class="hand peace icon"></i>
+        <%= f.submit "Save Learner", :class => 'ui button' %>
+    </button>
+  </div>
+  <% end %>
+
+</div>
