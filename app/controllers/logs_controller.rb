@@ -12,14 +12,14 @@ class LogsController < ApplicationController
 
   def new
     @learner = Learner.find_by_id(params[:learner_id])
-    @log = @learner.logs.build
+    @log = Log.new
   end
 
   def create
     @learner = Learner.find_by_id(params[:learner_id])
     @log = @learner.logs.create(log_params)
     if @learner.logs.push(@log)
-      redirect_to log_path(@log)
+      redirect_to learner_log_path(@learner, @log)
     else
       redirect_to :back
     end

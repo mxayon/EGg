@@ -1,41 +1,50 @@
 <div class="ui raised very padded text container segment centered">
-  <h2 class="ui header right">Sign Up for Egg!</h2>
-  <%= image_tag 'twitt_egg.png', class: "ui centered small image" %>
+  <h2 class="ui header centered">
+    <%= image_tag 'egg_drive.png', class: "ui tiny image" %>
+  </h2>
+  <h2 class="ui header centered">
+    <%= image_tag 'egg_logo.png', class: "ui tiny image" %>
+  </h2>
+  <h3 class="ui header centered">
+    Sign Up!
+  </h3>
   <div class="ui large form">
     <%= form_for :user, url: '/users' do |f| %>
     <div class="two fields">
-      <div class="ui left icon input">
-        <i class="user icon"></i>
-      </div>
       <div class="field">
         <label>First & Last Name</label>
         <%= f.text_field :name, :placeholder => 'First & Last Name' %>
       </div>
-      <div class="ui left icon input">
-        <i class="mail icon"></i>
+      <div class="ui right icon input">
+        <i class="user icon"></i>
       </div>
       <div class="field">
         <label>E-mail</label>
         <%= f.text_field :email, :placeholder => 'email@address.com' %>
       </div>
+      <div class="ui right icon input">
+        <i class="mail icon"></i>
+      </div>
     </div>
     <div class="two fields">
-      <div class="ui left icon input">
-        <i class="privacy icon"></i>
-      </div>
       <div class="field">
         <label>Password</label>
         <%= f.password_field :password, :placeholder => 'Password' %>
       </div>
-      <div class="ui left icon input">
-        <i class="lock icon"></i>
+      <div class="ui right icon input">
+        <i class="privacy icon"></i>
       </div>
       <div class="field">
         <label>Password Confirmation</label>
         <%= f.password_field :password_confirmation, :placeholder => 'Password Confirmation' %>
       </div>
+      <div class="ui right icon input">
+        <i class="lock icon"></i>
+      </div>
     </div>
-    <%= f.submit "Submit", :class => 'ui submit button' %>
+    <%= f.submit "Submit", :class => 'ui fluid medium submit button' %>
     <% end %>
+
+
   </div>
 </div>

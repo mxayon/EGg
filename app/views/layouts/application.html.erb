@@ -6,14 +6,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-
     <div class="ui stackable menu">
       <div>
         <%= link_to '/', :class => 'item' do %>
-          <%= image_tag 'twitt_egg.png' %>
+        <%= image_tag 'egg_drive.png' %>
         <% end %>
       </div>
       <a>
@@ -23,20 +19,23 @@
       <a>
         <%= link_to 'Signup', '/signup', :class => 'item' %>
         <% else %>
-      <div class="right menu">
-        <a>
-          <%= link_to "Welcome, #{current_user.name} !", root_path, :class => 'item' %>
-        </a>
-        <a>
-          <%= link_to 'Logout', '/logout', :class => 'item' %>
-        </a>
-        <a>
-          <%= link_to 'Learners', learners_path, :class => 'item' %>
-        </a>
-        <% end %>
+        <div class="right menu">
+          <a>
+            <%= link_to "Welcome, #{current_user.name} !", root_path, :class => 'item' %>
+          </a>
+          <a>
+            <%= link_to 'Logout', '/logout', :class => 'item' %>
+          </a>
+          <a>
+            <%= link_to 'Learners', learners_path, :class => 'item' %>
+          </a>
+          <% end %>
+        </div>
       </div>
-    </div>
 
+  </head>
+
+  <body>
 
     <%= yield %>
   </body>

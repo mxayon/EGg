@@ -1,15 +1,63 @@
-<%= form_for @log do |f| %>
-  Title :<%= f.text_field :title %>
-  Learner Starting mood: <%= f.text_field :starting_mood %>
-  Level: <%= f.text_field :level %>
-  Can Verbally make word approximation: <%= f.text_field :verbal_word_approximation %>
-  Can Physically Identify or Point to: <%= f.text_field :physically_identify %>
-  Good Choices Used :<%= f.text_field :good_choices %>
-  Action :<%= f.text_field :action %>
-  Observations :<%= f.text_field :observations %>
-  Comments :<%= f.text_field :comments %>
-  Date of Log :<%= f.text_field :date %>
-  Learner ID :<%= f.text_field :learner_id %>
+<div class="ui raised very padded text container segment centered">
+  <%= form_for([@learner, @log]) do |f| %>
+  <div class="ui form">
+    <div class="equal width fields">
+        <div class="field">
+        <label>  Title :</label>
+        <%= f.text_field :title, :placeholder => 'Lesson: Set' %>
+      </div>
+      <div class="field">
+        <label>  Learner Starting mood: </label>
+        <%= f.text_field :starting_mood, :placeholder => 'Happy'  %>
+      </div>
+      <div class="field">
+        <label>Level: </label>
+        <%= f.text_field :level, :placeholder => '1' %>
+      </div>
+    </div>
+    <div class="equal width fields">
+      <div class="field">
+        <label>Can Verbally make word approximation: </label>
+        <%= f.text_field :verbal_word_approximation, :placeholder => 'true' %>
+      </div>
+      <div class="field">
+        <label> Can Physically Identify or Point to:  </label>
+        <%= f.text_field :physically_identify, :placeholder => 'true'  %>
+      </div>
+      <div class="field">
+        <label>Good Choices Used :</label>
+        <%= f.text_field :good_choices, :placeholder => 'I need Blankie, I need Hug, Outside Play' %>
+      </div>
+    </div>
+    <div class="equal width fields">
+      <div class="field">
+        <label>Action : </label>
+        <%= f.text_field :action, :placeholder => 'Go get Blankie, Give someone a hug'  %>
+      </div>
+      <div class="field">
+        <label>Observations :</label>
+        <%= f.text_field :observations, :placeholder => 'Learner was...' %>
+      </div>
+      <div class="field">
+        <label>Comments :</label>
+        <%= f.text_field :comments, :placeholder => 'The Lesson took...' %>
+      </div>
+    </div>
+    <div class="equal width fields">
+      <div class="field">
+        <label>Date of Log :</label>
+        <%= f.text_field :date, :placeholder => '2016/11/11' %>
+      </div>
+      <div class="field">
+        <label>Learner ID:</label>
+        <%= f.text_field :learner_id, :placeholder => '1' %>
+      </div>
+    </div>
+    <button class="fluid ui button">
+      <i class="hand peace icon"></i>
+        <%= f.submit "Save Log", :class => 'ui button' %>
+    </button>
+  </div>
+  <% end %>
 
-  <%= f.submit "Save Log" %>
-<% end %>
+</div>
