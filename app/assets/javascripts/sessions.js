@@ -24,8 +24,8 @@ $(document).ready(function() {
               prompt : 'Please enter your password'
             },
             {
-              type   : 'length[6]',
-              prompt : 'Your password must be at least 6 characters'
+              type   : 'length[3]',
+              prompt : 'Your password must be at least 3 characters'
             }
           ]
         }

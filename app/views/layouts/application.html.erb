@@ -10,13 +10,32 @@
 
   <body>
 
-    <% if current_user %>
-      Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-    <% else %>
-      <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-    <% end %>
-    |
-    <%= link_to 'Learners', learners_path, method: :get %>
+    <div class="ui stackable menu">
+      <div>
+        <%= link_to '/', :class => 'item' do %>
+          <%= image_tag 'twitt_egg.png' %>
+        <% end %>
+      </div>
+      <a>
+        <% if !current_user %>
+        <%= link_to 'Login', '/login', :class => 'item' %>
+      </a>
+      <a>
+        <%= link_to 'Signup', '/signup', :class => 'item' %>
+        <% else %>
+      <div class="right menu">
+        <a>
+          <%= link_to "Welcome, #{current_user.name} !", root_path, :class => 'item' %>
+        </a>
+        <a>
+          <%= link_to 'Logout', '/logout', :class => 'item' %>
+        </a>
+        <a>
+          <%= link_to 'Learners', learners_path, :class => 'item' %>
+        </a>
+        <% end %>
+      </div>
+    </div>
 
 
     <%= yield %>
