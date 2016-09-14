@@ -35,3 +35,32 @@
 |
 <a href="<%= edit_learner_log_path(@learner, @log) %>" class="button expanded">Edit Log</a> |
 <%= link_to 'Back', :back %>
+
+
+<div class="ui segment">
+  <div class="ui top attached label">1. Can Identify Emotion</div>
+  <p> <%= @log.verbal_word_approximation %> <%= @log.physically_identify %></p>
+</div>
+<div class="ui segment">
+  <div class="ui top attached label">2. Can Make Good Choices</div>
+  <p> Good Choices Used: <%= @log.good_choices %></p>
+</div>
+<div class="ui segment">
+  <div class="ui top attached label">3. Can Act Out Good Choices</div>
+  <p> Assistive Instructions Given: <%= @log.good_choices %></p>
+</div>
+
+
+<div class="ui segment">
+  <a class="ui ribbon label">Observations</a>
+  <div class="ui dividing header">
+    <i class="settings icon"></i>
+    <div class="content">
+      Dividing
+      <div class="sub header">Sub-header</div>
+    </div>
+  </div>
+  <p>
+    <%= @log.observations %>
+  </p>
+</div>
