@@ -1,68 +1,69 @@
-<% @logs.each do |log| %>
-<div class="ui padded segment">
-  <div class="ui top attached button" tabindex="0">
-    <%= link_to " #{log.title}", learner_log_path(@learner, log)%>
+<div class="ui grid container">
+  <div class="four wide column">
+    <div class="ui small vertical menu">
+      <div class="item">
+        <%= image_tag 'egg_logo.png'%>
+      </div>
+      <a class="item">Features</a>
+      <a class="item">Testimonials</a>
+      <a class="item">Sign-in</a>
+      <a class="item">
+        <i class="grid layout icon"></i> Browse
+      </a>
+      <div class="ui link card">
+        <div class="fluid ui content">
+          <h2 class="ui centered header">
+            <i class="hand peace icon"></i>
+          </h2>
+          <div class="fluid ui bottom attached button">
+            <i class="add icon"></i>
+            <a href="<%= new_learner_log_path %>">Add A Log</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div class="ui attached segment">
-    <a class="ui ribbon label">
-      <i class="gamepad icon"></i>
-      Level: <%= log.level %>
-    </a>
-
-
-    <div class="ui block header">
-      <i class="settings icon"></i>
+<div class="sixteen wide column">
+  <% @logs.each do |log| %>
+  <div class=" ui fluid  segment">
+    <div class="ui top attached button" tabindex="0">
+      <%= link_to " #{log.title}", learner_log_path(@learner, log)%>
+    </div>
+    <div class="ui attached segment">
+      <a class="ui ribbon label">
+        <i class="gamepad icon"></i>
+        Level: <%= log.level %>
+      </a>
+      <div class="ui icon center aligned dividing header">
+        <i class="settings icon"></i>
+        <div class="content">
+          <div class="sub header">Date of Log : <%= log.date %> </div>
+        </div>
+      </div>
+      <div class="ui block header">
+        <i class="settings icon"></i>
         <div class="content">
           <%= log.starting_mood %>
           <div class="sub header">Learners Starting Mood</div>
         </div>
-    </div>
-    <div class="ui segment">
-      <div class="ui top attached label">Comments</div>
-      <p>
-        <%= log.comments %>
-      </p>
-    </div>
-
-  </div>
-  <div class="ui bottom attached button" tabindex="0">
-    <%= link_to "Delete", learner_log_path(@learner, log), method: :delete %>
-  </div>
-
-</div>
-<% end %>
-
-<div class="ui divided items">
-  <div class="item">
-    <div class="ui tiny image">
-      <div class="ui icon center aligned dividing header">
-        <i class="settings icon"></i>
-        <div class="content">
-        <div class="sub header">Date of Log : <%= log.date %> </div>
-        </div>
       </div>
-    </div>
-    <div class="middle aligned content">
-      Content A
-    </div>
-  </div>
-  <div class="item">
-    <div class="ui tiny image">
-      <img src="/images/wireframe/image.png">
-    </div>
-    <div class="middle aligned content">
-      Content B
-    </div>
-  </div>
-  <div class="item">
-    <div class="ui tiny image">
-      <img src="/images/wireframe/image.png">
-    </div>
-    <div class="middle aligned content">
-      Content C
+      <div class="ui segment">
+        <div class="ui top attached label">Comments</div>
+        <p>
+          <%= log.comments %>
+        </p>
+      </div>
+      <button class="ui right button">
+        <i class="pause icon"></i>
+        <%= link_to "Delete", learner_log_path(@learner, log), method: :delete %>
+      </button>
     </div>
   </div>
+  <% end %>
+
+  <%= link_to 'Back', :back %>
 </div>
 
-<%= link_to 'Back', :back %>
+</div>
