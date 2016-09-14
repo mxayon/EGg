@@ -1,20 +1,60 @@
-<h2 class="ui header">
-  <i class="hand peace icon"></i>
-  <div class="content">
-    <a href="<%= new_learner_path %>" class="button expanded">Add A Learner</a>
+<div class="ui grid">
+<div class="row">
+  <div class="five wide column">
+    <div class="ui small vertical menu">
+      <div class="item">
+        <%= image_tag 'egg_logo.png'%>
+      </div>
+        <a class="item">Features</a>
+        <a class="item">Testimonials</a>
+        <a class="item">Sign-in</a>
+        <a class="item">
+          <i class="grid layout icon"></i> Browse
+        </a>
+        <div class="ui link card">
+          <div class="fluid ui content">
+            <h2 class="ui centered header">
+              <i class="hand peace icon"></i>
+            </h2>
+            <div class="fluid ui bottom attached button">
+              <i class="add icon"></i>
+              <a href="<%= new_learner_path %>">Add A Learner</a>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
-</h2>
 
-<% @learners.each do |learner| %>
+  <div class="eleven wide columns">
+    <% @learners.each do |learner| %>
+    <div class="fluid ui large card">
+      <div class="ui link items">
+        <div class="fluid ui item">
+          <div class="ui large image">
+            <%= image_tag "#{learner.image}" %>
+          </div>
+        </div>
+      <div class="ui fluid middle aligned content">
+        <div class="header">
+          <%= link_to "#{learner.name}", learner_path(learner)%>
+        </div>
+        <div class="description">
+          <div class="meta">
+            <span class="category">Age: <%= learner.age %></span>
+            <span class="right floated time">2 days ago</span>
+          </div>
+        </div>
+      </div>
+      </div>
+      <strong><%= learner.parent_guardian %>: </strong> <%= learner.contact_info %>
+      <a href="<%= edit_learner_path(learner) %>" class="fluid ui button">Edit Learner Information</a>
+    </div>
 
-<h1> <%= learner.name %> </h1>
-<h2> <%= learner.age %> </h2>
-<h3> <%= learner.parent_guardian %> </h3>
-<h4> <%= learner.contact_info %> </h4>
-<br>
-<%= link_to "Show #{learner.name}", learner_path(learner)%>
-|
-<a href="<%= edit_learner_path(learner) %>" class="button expanded">Edit Learner Information</a>
-<%= link_to 'Back', :back %>
+    <% end %>
+  </div>
 
-<% end %>
+
+
+</div>
+
+</div>
