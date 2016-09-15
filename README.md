@@ -1,12 +1,9 @@
 # EGG
 ## Emotional Gauge Game
-Inline-style:
-![logo](egg_drive.png)
-![logo](egg_logo.png)
 
 
 
-[Emotional Gauge Game](https://emotionalgaugegame.herokuapp.com/)
+[Emotional Gauge Game Heroku Link](https://emotionalgaugegame.herokuapp.com/)
 
 
 #Tech Stack
