@@ -2,17 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-    background-color: #DADADA;
-  }
-  body > .grid {
-    height: 100%;
-  }
-  .image {
-    margin-top: -100px;
-  }
-  .column {
-    max-width: 450px;
-  }
-  .content {
-    color: #BF5FFF;
-  }
+      background-color: #DADADA;
+      }
+body > .grid {
+        height: 100%;
+        }
+.image {
+        margin-top: -100px;
+        }
+.column {
+        max-width: 450px;
+        }
+.content {
+        color: #BF5FFF;
+        }
+#canvas {
+        border: 1px solid #aaa;
+        -moz-box-shadow: 3px 3px 8px #222;
+        -webkit-box-shadow: 3px 3px 8px #222;
+        box-shadow: 3px 3px 8px #222;
+        }
