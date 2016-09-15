@@ -59,6 +59,33 @@ learners_list = [
     contact_info: "(415)599-50-90",
     inventory_of_favorites: "Sherwin my Doll, Ipad Play, Purple Fidget Toy",
     user_id: 1
+  },
+  {
+    name: "Tim",
+    image: "",
+    age: 4,
+    parent_guardian: "Josephine",
+    contact_info: "(415)599-50-90",
+    inventory_of_favorites: "Sherwin my Doll, Ipad Play, Purple Fidget Toy",
+    user_id: 1
+  },
+  {
+    name: "Dale",
+    image: "",
+    age: 6,
+    parent_guardian: "Josephine",
+    contact_info: "(415)599-50-90",
+    inventory_of_favorites: "Sherwin my Doll, Ipad Play, Purple Fidget Toy",
+    user_id: 1
+  },
+  {
+    name: "Adam",
+    image: "",
+    age: 4,
+    parent_guardian: "Josephine",
+    contact_info: "(415)599-50-90",
+    inventory_of_favorites: "Sherwin my Doll, Ipad Play, Purple Fidget Toy",
+    user_id: 1
   }
 ]
 
@@ -81,6 +108,18 @@ logs_list = [
     level: 2,
     verbal_word_approximation: false,
     physically_identify: false,
+    good_choices: "Give a Hug, Take a Nap",
+    action: "Go take nap",
+    observations: "Tom was pretty sad today, he intially did not want to do the lesson",
+    comments: "Tom may need more sleep and play time",
+    learner_id: 2
+  },
+  {
+    title: "Lesson: Ready, Set, Go!",
+    starting_mood: "Happy",
+    level: 3,
+    verbal_word_approximation: false,
+    physically_identify: true,
     good_choices: "Give a Hug, Take a Nap",
     action: "Go take nap",
     observations: "Tom was pretty sad today, he intially did not want to do the lesson",
