@@ -47,7 +47,7 @@ class LearnersController < ApplicationController
   private
 
   def learner_params
-    params.require(:learner).permit(:name, :age, :image, :parent_guardian, :contact_info, :user_id)
+    params.require(:learner).permit(:name, :age, :image, :parent_guardian, :contact_info, :user_id, :inventory_of_favorites)
   end
 
 

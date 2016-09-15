@@ -13,6 +13,10 @@
         </div>
         <%= link_to "Show #{@learner.name}'s Logs", learner_logs_path(@learner), :class => 'fluid ui button' %>
       </div>
+      <div class="ui segment">
+        Inventory of Favorite Things:
+        <p><%= @learner.inventory_of_favorites %></p>
+      </div>
     </div>
     <div class="ui ten wide column">
       <%= image_tag(@learner.image)%>
