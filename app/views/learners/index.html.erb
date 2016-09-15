@@ -30,7 +30,7 @@
   <div class="twelve wide column">
     <% @learners.each do |learner| %>
     <div class="fluid ui large card">
-      <div class="ui link items">
+      <div class="ui items">
         <div class="fluid ui item">
           <div class="ui large image">
             <%= image_tag "#{learner.image}" %>
@@ -42,13 +42,16 @@
         </div>
         <div class="description">
           <div class="meta">
-            <span class="category">Age: <%= learner.age %></span>
-            <span class="right floated time">2 days ago</span>
+            <span class="category">Age: 4</span>
+            <span class="right floated time"><%= learner.user_id %></span>
           </div>
         </div>
       </div>
       </div>
+      Emergency Contact:
       <strong><%= learner.parent_guardian %>: </strong> <%= learner.contact_info %>
+        <br>
+        Inventory of Favorite Things: <%= learner.inventory_of_favorites %>
       <a href="<%= edit_learner_path(learner) %>" class="fluid ui button">Edit Learner Information</a>
     </div>
 
