@@ -14,8 +14,6 @@
 * groupdate
 
 #Wire frame
-
-Inline-style:
 ![wireframe](http://imgur.com/9eKMN1p)
 
 
