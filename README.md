@@ -20,7 +20,7 @@
 
 #Why?
 * the ultimate inter-activity!
-originally wanted a game but instead chose to focus on interacting with each learner - ipads are great but its more important to use it as a utilize it as a tool to interact with them on this level.
+originally wanted a game but instead chose to focus on interacting with each learner - ipads are great but its more important to use it as a utilize it as a tool to interact with them on a more engaging level.
 Things you may want to cover:
 
 #Stretch - inarium
