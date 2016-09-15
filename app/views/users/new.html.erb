@@ -43,6 +43,33 @@
         <i class="lock icon"></i>
       </div>
     </div>
+  <div class="inline fields">
+    <label for="fruit">Learner Relation:</label>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="case_manager" checked="" tabindex="0" class="hidden">
+        <label>Case Manager</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="speech_therapist" tabindex="0" class="hidden">
+        <label>Speech Therapist</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="occupational_therapist" tabindex="0" class="hidden">
+        <label>Occupational Therapist</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="parent_guardian" tabindex="0" class="hidden">
+        <label>Parent or Guardian</label>
+      </div>
+      </div>
+  </div>
     <%= f.submit "Submit", :class => 'ui fluid medium submit button' %>
     <% end %>
 

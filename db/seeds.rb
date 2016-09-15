@@ -1,22 +1,15 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+
+# if User.all.count > 0
+#   User.destroy_all
+# end
 #
-# Examples:
+# if Learner.all.count > 0
+#   Learner.destroy_all
+# end
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-if User.all.count > 0
-  User.destroy_all
-end
-
-if Learner.all.count > 0
-  Learner.destroy_all
-end
-
-if Log.all.count > 0
-  Log.destroy_all
-end
+# if Log.all.count > 0
+#   Log.destroy_all
+# end
 
 users_list = [
   {

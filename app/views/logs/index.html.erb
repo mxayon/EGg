@@ -1,16 +1,17 @@
-<%= line_chart Log.group_by_day(:created_at).count %>
-
+<div class="segment">
+  <%= line_chart Log.group(:starting_mood).group_by_day(:created_at).count %>
+</div>
 <div class="ui grid container">
   <div class="four wide column">
     <div class="ui small vertical menu">
       <div class="item">
         <%= image_tag 'egg_logo.png'%>
       </div>
-      <a class="item">Features</a>
-      <a class="item">Testimonials</a>
-      <a class="item">Sign-in</a>
+      <a class="item">Learners</a>
+      <a class="item">Logs</a>
+      <a class="item">Case Manager Page</a>
       <a class="item">
-        <i class="grid layout icon"></i> Browse
+        <i class="grid layout icon"></i> Resources
       </a>
       <div class="ui link card">
         <div class="fluid ui content">
@@ -65,7 +66,6 @@
   </div>
   <% end %>
 
-  <%= link_to 'Back', :back %>
 </div>
 
 </div>

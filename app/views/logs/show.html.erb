@@ -1,4 +1,7 @@
-<%= line_chart Log.group(:starting_mood).group_by_day(:created_at).count %>
+<div class="segment">
+  <%= line_chart Log.group(:starting_mood).group_by_day(:created_at).count %>
+
+</div>
 <div class="ui container">
   <div class="ui segment">
     <a class="ui ribbon label">
@@ -23,11 +26,16 @@
     <div class="ui segment">
       <div class="ui top attached label">1. Can Identify Emotion</div>
       <p>
+        <i class="assistive listening systems icon"></i>
+        Can Verbally Express:
         <%= @log.verbal_word_approximation %>
-        <%= @log.physically_identify %>
+          |
+          <i class="sign language icon"></i>
+          Can Physically Identify:
+          <%= @log.physically_identify %>
+
       </p>
     </div>
-    Good Choices Used: <%= @log.good_choices %>
 
 
     <div class="ui segment">
@@ -57,6 +65,5 @@
   <%= link_to "Delete", learner_log_path, method: :delete %>
   |
   <a href="<%= edit_learner_log_path(@learner, @log) %>" class="button expanded">Edit Log</a> |
-  <%= link_to 'Back', :back %>
 
 </div>
