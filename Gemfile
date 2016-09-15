@@ -32,6 +32,10 @@ gem 'autoprefixer-rails', '~> 6.4.1'
 
 gem 'therubyracer', platforms: :ruby # or any other runtime
 
+gem 'groupdate'
+
+gem 'chartkick'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
