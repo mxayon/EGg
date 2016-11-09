@@ -10,15 +10,16 @@ originally wanted a game but instead chose to focus on interacting with each lea
 
 
 <p>
-<img src="http://imgur.com/a/QkiDp.jpg">
+<img src="http://res.cloudinary.com/lce3spnbi/image/upload/s--_bMIWI53--/v1478719065/egg-device_foea3g.png">
 </p>
+
 
 ## Heroku
 <a href="https://emotionalgaugegame.herokuapp.com/">EGG | Emotional Gauge Game</a>
 
 
 ### Wireframes:
-<img src="http://imgur.com/a/s7uZS.jpg">
+<img src="http://res.cloudinary.com/lce3spnbi/image/upload/s--O_D3mZIm--/v1478719065/egg-wire_vxxbxf.png">
 
 ## Technologies Used:
 * Ruby on Rails
