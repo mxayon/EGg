@@ -10,7 +10,7 @@ originally wanted a game but instead chose to focus on interacting with each lea
 
 
 <p>
-<img src="http://imgur.com/a/QkiDp">
+<img src="http://imgur.com/a/QkiDp.jpg">
 </p>
 
 ## Heroku
@@ -18,7 +18,7 @@ originally wanted a game but instead chose to focus on interacting with each lea
 
 
 ### Wireframes:
-<img src="http://imgur.com/9eKMN1p">
+<img src="http://imgur.com/a/s7uZS.jpg">
 
 ## Technologies Used:
 * Ruby on Rails
