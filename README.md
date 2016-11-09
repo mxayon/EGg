@@ -1,30 +1,43 @@
 # EGG
 ## Emotional Gauge Game
+Game and lesson tracking tool for learners with developmental learning disabilities.
 
-
-
-[Emotional Gauge Game Heroku Link](https://emotionalgaugegame.herokuapp.com/)
-
-
-#Tech Stack
-* semantic ui
-* html 5 / canvas
-* highcharts via chartkick
-* ruby on rails
-* groupdate
-
-#Wire frame
-![wireframe](http://imgur.com/9eKMN1p)
-
-
+Ruby on Rails full-stack web app with a strong relational database. Uses Highcharts to map out mood and age of learners, engaging learners with CSS-Animate and a basic HTML5 canvas game.
 
 #Why?
 * the ultimate inter-activity!
 originally wanted a game but instead chose to focus on interacting with each learner - ipads are great but its more important to use it as a utilize it as a tool to interact with them on a more engaging level.
-Things you may want to cover:
 
-#Stretch - inarium
+
+<p>
+<img src="http://i.imgur.com/c5e7j6e.jpg">  <img src="http://i.imgur.com/CSxeVEp.jpg">
+</p>
+
+## Heroku
+<a href="https://emotionalgaugegame.herokuapp.com/">EGG | Emotional Gauge Game</a>
+
+
+### Wireframes:
+<img src="http://imgur.com/9eKMN1p">
+
+## Technologies Used:
+* Ruby on Rails
+* PostgreSQL
+* semantic ui
+* html 5 / canvas
+* bcrypt
+
+### Ruby Gems Used:
+* highcharts via chartkick
+* groupdate
+
+## Future Development:
 * multiple user sign up
 * message board
-* websockets
+* websockets for game scores
 * emailer or text message to emergency contact
+* upload own images for picture cards
+
+<br>
+
+<p align="center"><a href="https://emotionalgaugegame.herokuapp.com/">&copy;Emotional Gauge Game </a></p>
