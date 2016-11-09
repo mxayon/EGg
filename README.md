@@ -4,13 +4,13 @@ Game and lesson tracking tool for learners with developmental learning disabilit
 
 Ruby on Rails full-stack web app with a strong relational database. Uses Highcharts to map out mood and age of learners, engaging learners with CSS-Animate and a basic HTML5 canvas game.
 
-#Why?
+###Why?
 * the ultimate inter-activity!
 originally wanted a game but instead chose to focus on interacting with each learner - ipads are great but its more important to use it as a utilize it as a tool to interact with them on a more engaging level.
 
 
 <p>
-<img src="http://i.imgur.com/c5e7j6e.jpg">  <img src="http://i.imgur.com/CSxeVEp.jpg">
+<img src="http://imgur.com/a/QkiDp">
 </p>
 
 ## Heroku
